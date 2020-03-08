@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+}
+
+body {
+    background: url("https://image.freepik.com/free-vector/_12944-454.jpg");
+}
+
+p {
+    /* padding: auto;
+    margin: auto; */
+    border: 7px soled red;
+    color: rgba(242, 141, 252, 0.699);
+    font-size: 14vh;
+    text-align: center;
+}
+
+.text {
+    background: red;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: textmove;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    justify-self: center;
+    align-self: center;
+    text-justify: center;
+}
+
+#zakhar {
+    font-size: 2vh;
+    background-color: white;
+    font-family: monospace;
+    text-align: center;
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+.picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 33% 33% 33%;
+}
+
+#picturee {
+    height: 50vh;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+    animation-name: picturemotion;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    opacity: 0;
+}
+
+.container {
+    background: rgba(256, 256, 256, 80%);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
+}
+
+@keyframes textmove {
+    50% {
+        background: -webkit-linear-gradient(right, rgba(242, 141, 252, 1), rgba(242, 141, 252, 0.2));
+        transform: scale(1.2) rotate(10deg);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    70% {
+        background: white;
+        opacity: 0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes picturemotion {
+    70% {
+        opacity: 1;
+    }
+}
